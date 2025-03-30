@@ -91,7 +91,7 @@ if st.session_state.current_view == "Add":
 elif st.session_state.current_view == "Library":  
      st.write("### Your Library")  
      for index, book in enumerate(st.session_state.library):  
-        for book in books:
+        for book in library:
     st.write(f"{book.get('title', 'Unknown Title')} by {book.get('author', 'Unknown Author')} ({book.get('publication_year', 'Unknown Year')}) - {book.get('genre', 'Unknown Genre')} - {'Read' if book.get('read_status', False) else 'Unread'}")
  
          if st.button(f"Remove {book['title']}", key=index):  
