@@ -88,12 +88,10 @@ if st.session_state.current_view == "Add":
      if submit_button:  
          add_book(title, author, publication_year, genre, read_status == "Yes")  
    
-elif st.session_state.current_view == "Library": 
+elif st.session_state.current_view == "Library":  
      st.write("### Your Library")  
-     for index, book in enumerate(st.session_state_library):  
-        for book in books:
-    st.write(f"{book.get('title', 'Unknown Title')} by {book.get('author', 'Unknown Author')} ({book.get('publication_year', 'Unknown Year')}) - {book.get('genre', 'Unknown Genre')} - {'Read' if book.get('read_status', False) else 'Unread'}")
- 
+     for index, book in enumerate(st.session_state.library):  
+         st.write(f"{book['title']} by {book['author']} ({book['publication_year']}) - {book['genre']} - {'Read' if book['read_status'] else 'Unread'}")  
          if st.button(f"Remove {book['title']}", key=index):  
              remove_book(index)  
    
