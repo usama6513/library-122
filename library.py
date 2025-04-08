@@ -90,8 +90,8 @@ st.markdown('''
     .stButton>button {
         border-radius: 0.375rem;
     }
-</style>
-''') , unsafe_allow_html=True
+    </style>
+"""), unsafe_allow_html=True
 
 def load_lottieurl(url):
     try:
