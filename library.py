@@ -22,7 +22,7 @@ st.set_page_config(
 
 
 # Custom Cs for Styling
-st.markdown(''' 
+st.markdown(""" 
 <style/>
         .main.header {
         font_size: 3rem  !important;
